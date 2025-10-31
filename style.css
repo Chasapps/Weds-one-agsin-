@@ -1,0 +1,50 @@
+/* Theme */
+:root{
+  --bg: #f6f8ff;
+  --panel: #ffffffdd;
+  --ink: #102132;
+  --muted: #5d6b7a;
+  --brand: #0f5f99;
+  --accent: #f06a1f;
+  --ring: #9ec9ff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family: Nunito, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--ink);}
+h1{font-size: clamp(20px, 4.4vw, 28px); margin: 0}
+.subtitle{color:var(--muted); font-weight:600; margin:0 0 8px}
+header.glass{position:sticky; top:0; backdrop-filter:saturate(110%) blur(8px); background:#fefeffcc; border-bottom:1px solid #0001; z-index:5}
+.titlebar{display:flex; justify-content:space-between; align-items:center; padding:10px 14px; gap:12px}
+.brand{display:flex; align-items:center; gap:10px}
+.logo{font-size:26px}
+.tabs{display:flex; gap:8px; align-items:center}
+.tab{border:0; background:#fff; padding:8px 12px; border-radius:999px; cursor:pointer; box-shadow:0 1px 0 #0001}
+.tab.active{background:var(--accent); color:#fff}
+.pill{border:1px solid #0002; background:#fff; padding:8px 12px; border-radius:999px; cursor:pointer}
+
+main{max-width:980px; margin:0 auto; padding:14px}
+.view.hidden{display:none}
+
+.card-view{display:grid; grid-template-columns: 48px 1fr 48px; gap:8px; align-items:stretch}
+.pool-card{background:var(--panel); border:1px solid #0001; border-radius:16px; padding:12px; display:flex; flex-direction:column; gap:10px; box-shadow: 0 8px 24px #0001;}
+.pool-name{font-size: clamp(18px, 5vw, 24px); font-weight:800}
+.nav-arrow{border:0; background:#fff; border:1px solid #0002; border-radius:12px; font-size:32px; line-height:1; cursor:pointer}
+.map{height: 46vh; min-height:280px; border-radius:12px; overflow:hidden; border:1px solid #0001}
+.controls{display:flex; justify-content:space-between; align-items:center; gap:12px}
+.toggle{display:flex; align-items:center; gap:8px; font-weight:700}
+.toggle input{display:none}
+.toggle-pill{width:42px; height:26px; background:#dde6f3; border-radius:999px; position:relative; display:inline-block; vertical-align:middle}
+.toggle-pill::after{content:''; position:absolute; width:20px; height:20px; border-radius:50%; background:#fff; top:3px; left:3px; box-shadow:0 1px 2px #0002; transition:.2s}
+.toggle input:checked + .toggle-pill{background:#9be29b}
+.toggle input:checked + .toggle-pill::after{left:19px}
+
+.counter-line{display:flex; justify-content:space-between; align-items:center; margin-top:10px; color:var(--muted)}
+.link{background:none; border:0; color:var(--brand); text-decoration:underline; cursor:pointer}
+
+.passport-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:12px}
+.stamp{border:2px dashed #0b6; border-radius:12px; padding:10px; background:#fff}
+.stamp .name{font-weight:800}
+.stamp .ok{font-size:42px}
+
+.fullscreen-map body{overflow:hidden}
+.fullscreen{position:fixed !important; inset:60px 8px 8px 8px; z-index:9;}
